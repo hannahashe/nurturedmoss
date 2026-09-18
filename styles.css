@@ -146,6 +146,39 @@ header p {
   font-style: italic;
 }
 
+.site-nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(3rem, 8vw, 6rem);
+  margin-top: -3rem;
+  font-size: 0.72rem;
+  text-transform: lowercase;
+  background: var(--cobalt);
+  height: 2.5rem;
+  size: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.site-nav a {
+  border-bottom: 1px solid currentColor;
+  color: var(--bone);
+  text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: var(--lime);
+  color: var(--charcoal);
+  outline: none;
+  transform: none;
+}
+
 main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -424,6 +457,14 @@ nav {
     padding-top: 4rem;
     padding-bottom: 4rem;
     text-align: center;
+  }
+
+  .site-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.7rem 1rem;
+    margin-bottom: 3rem;
+    font-size: 0.68rem;
   }
 
   h1 {
