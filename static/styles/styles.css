@@ -1,6 +1,6 @@
 /* Global Styles */
 /* Define the base styles for the entire website */
-
+/* Static variables */
 :root {
   --bone: #f0e7cf;
   --charcoal: #20201d;
@@ -22,34 +22,25 @@
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
 }
 
+/* Global Sizing */
 * {
   box-sizing: border-box;
 }
-
+/* Scroll behavior */
 html {
   scroll-behavior: smooth;
 }
+/* Body - Base styles */
 
 body {
   margin: 0;
-  background:
-    radial-gradient(
-      circle at 9% 8%,
-      rgba(180, 201, 52, 0.22),
-      transparent 18rem
-    ),
-    radial-gradient(
-      circle at 90% 34%,
-      rgba(113, 63, 131, 0.13),
-      transparent 24rem
-    ),
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
-  font-family: var(--body-font);
   font-size: 0.9rem;
   line-height: 1.25;
 }
 
+/* Layout - Base styles */
 header,
 main,
 footer {
@@ -74,25 +65,7 @@ h3 {
   font-weight: 400;
 }
 
-h1 {
-  position: relative;
-  z-index: 1;
-  max-width: 12ch;
-  margin-bottom: 2.5rem;
-  font-size: clamp(2.5rem, 5vw, 4.6rem);
-  font-family: var(--display-font);
-  font-style: italic;
-  line-height: 0.98;
-  letter-spacing: -0.03em;
-}
-
-header p {
-  position: relative;
-  z-index: 1;
-  max-width: 34rem;
-  margin-bottom: 0.2rem;
-  font-style: italic;
-}
+/* Site Navigation */
 
 .site-nav {
   position: relative;
@@ -100,9 +73,7 @@ header p {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: clamp(3rem, 8vw, 6rem);
-  margin-top: -3rem;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   text-transform: lowercase;
   background: var(--cobalt);
   height: 2.5rem;
@@ -126,6 +97,36 @@ header p {
   outline: none;
   transform: none;
 }
+
+/* Headings - Base styles */
+
+h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 12ch;
+  margin-bottom: 2.5rem;
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-family: var(--display-font);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+/* Hero */
+
+header {
+  margin-bottom: clamp(3rem, 8vw, 6rem);
+  background: url("../assets/nasaunsplash.jpg") center/cover no-repeat;
+}
+
+header p {
+  position: relative;
+  z-index: 1;
+  max-width: 34rem;
+  margin-bottom: 0.2rem;
+  font-style: italic;
+}
+
+/* Main Content - Base styles */
 
 main {
   display: grid;
