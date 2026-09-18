@@ -64,11 +64,11 @@
     </header>
     <!-- Main Content -->
     <main>
-      <section aria-labelledby="selected-work-heading">
+      <section class="selected-work" aria-labelledby="selected-work-heading">
         <h2 id="selected-work-heading">Selected work</h2>
 
         <div>
-          <article>
+          <article class="project-card">
             <figure>
               <div role="img" aria-label="Project image placeholder">
                 Project image
@@ -79,7 +79,7 @@
             <p>Django &middot; Python &middot; CSS</p>
           </article>
 
-          <article>
+          <article class="project-card">
             <figure>
               <div role="img" aria-label="Project image placeholder">
                 Project image
@@ -90,7 +90,7 @@
             <p>Django &middot; Python &middot; CSS</p>
           </article>
 
-          <article>
+          <article class="project-card project-card--mobile-hidden">
             <figure>
               <div role="img" aria-label="Project image placeholder">
                 Project image
@@ -101,20 +101,20 @@
             <p>Django &middot; Python &middot; CSS</p>
           </article>
         </div>
-
-        <aside aria-labelledby="digital-heading">
-          <h3 id="digital-heading">Digital</h3>
-          <p>
-            Design + build websites, digital tools and small web applications.
-          </p>
-          <p>For independent people, creative projects and communities.</p>
-          <a href="#contact"
-            >Work with me <span aria-hidden="true">&rarr;</span></a
-          >
-        </aside>
       </section>
 
-      <section aria-labelledby="practice-heading">
+      <section class="digital-cta" aria-labelledby="digital-heading">
+        <h2 id="digital-heading">Digital</h2>
+        <p>
+          Design + build websites, digital tools and small web applications.
+        </p>
+        <p>For independent people, creative projects and communities.</p>
+        <a href="#contact"
+          >Work with me <span aria-hidden="true">&rarr;</span></a
+        >
+      </section>
+
+      <section class="practice" aria-labelledby="practice-heading">
         <h2 id="practice-heading">The practice</h2>
 
         <ul>
@@ -141,10 +141,16 @@
         </ul>
       </section>
 
-      <section id="transmissions" aria-labelledby="featured-project-heading">
-        <p>Featured project</p>
+      <section
+        class="transmissions"
+        id="transmissions"
+        aria-labelledby="featured-project-heading"
+      >
+        <p class="featured-label">Featured project</p>
         <h2 id="featured-project-heading">Project title</h2>
-        <p>Tagline - subtitle describing the project, form, framing, etc.</p>
+        <p class="project-tagline">
+          Tagline - subtitle describing the project, form, framing, etc.
+        </p>
 
         <figure>
           <div role="img" aria-label="Large project image placeholder">
@@ -166,7 +172,7 @@
         <a href="#">View project <span aria-hidden="true">&rarr;</span></a>
       </section>
 
-      <section aria-labelledby="orbit-heading">
+      <section class="orbit" aria-labelledby="orbit-heading">
         <h2 id="orbit-heading">Orbit</h2>
         <div role="img" aria-label="Orbit illustration placeholder"></div>
         <p>Designer &middot; developer &middot; writer</p>
@@ -178,14 +184,14 @@
         <a href="#">About Moss <span aria-hidden="true">&rarr;</span></a>
       </section>
 
-      <section aria-labelledby="constellations-heading">
+      <section class="constellations" aria-labelledby="constellations-heading">
         <h2 id="constellations-heading">Constellations</h2>
         <p>People &middot; projects &middot; places &middot; collaborations</p>
         <p>A more experimental space for things that don't fit elsewhere.</p>
         <a href="#">Explore <span aria-hidden="true">&rarr;</span></a>
       </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
+      <section class="contact" id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact</h2>
         <h3>Have a project in mind?</h3>
         <p>
