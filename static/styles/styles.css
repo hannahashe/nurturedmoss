@@ -101,10 +101,6 @@ h3 {
 /* Headings - Base styles */
 
 h1 {
-  position: relative;
-  z-index: 1;
-  max-width: 12ch;
-  margin-bottom: 2.5rem;
   font-size: clamp(2.5rem, 5vw, 4.6rem);
   font-family: var(--display-font);
   line-height: 0.98;
@@ -114,23 +110,46 @@ h1 {
 /* Hero */
 
 header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 2rem;
   background: url("../assets/nasaunsplash.jpg") center/cover no-repeat;
-  width: auto;
-  height: 100%;
-  min-height: 30rem;
+  min-height: 34rem;
+  width: 100%;
 }
 
-header h1 {
-  color: var(--bone);
-}
-
-header p {
+.hero {
   position: relative;
-  z-index: 1;
-  max-width: 34rem;
-  margin-bottom: 0.2rem;
+  flex: 1;
+  min-height: 27rem;
+}
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(90%, 42rem);
+  margin: 0;
+  transform: translate(-50%, -50%);
+  color: var(--bone);
+  text-align: center;
+}
+
+.hero-details {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-details p {
+  max-width: 20rem;
+  margin-bottom: 0;
   font-style: italic;
   color: var(--bone);
 }
@@ -410,9 +429,9 @@ nav {
   }
 
   header {
-    min-height: 0;
+    min-height: 38rem;
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     text-align: center;
   }
 
@@ -420,7 +439,7 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.7rem 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
     font-size: 0.68rem;
   }
 
@@ -429,7 +448,16 @@ nav {
     font-size: clamp(2.3rem, 12vw, 3.4rem);
   }
 
-  header p {
+  .hero {
+    min-height: 30rem;
+  }
+
+  .hero-details {
+    display: block;
+    padding-inline: 1rem;
+  }
+
+  .hero-details p {
     margin-inline: auto;
     font-size: 0.75rem;
   }
