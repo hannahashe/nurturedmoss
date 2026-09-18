@@ -248,11 +248,11 @@ main > section {
   gap: 2rem;
 }
 
+/* Article figures and transmissions figures share the same styles */
+
 article figure {
   margin-bottom: 0.8rem;
 }
-
-/* Article figures and transmissions figures share the same styles */
 
 article figure div,
 .transmissions figure div {
@@ -274,29 +274,27 @@ article p {
 
 /* Digital Work CTA */
 
-.selected-work aside {
+.digital-cta {
   border: 2px solid var(--lime);
   background: var(--lime);
   color: var(--charcoal);
   padding: 2rem 0 2rem 2rem;
-  padding-right: 2rem;
-  transform: rotate(1deg);
 }
 
-.selected-work aside h3 {
+.digital-cta h3 {
   font-family: var(--display-font);
   font-size: clamp(1.4rem, 3vw, 2.2rem);
   font-style: italic;
 }
 
-.selected-work aside p {
-  max-width: 18rem;
-  font-size: 0.78rem;
-}
-
-.selected-work aside a {
+.digital-cta a {
   background: var(--charcoal);
   color: var(--bone);
+}
+
+.digital-cta p {
+  max-width: 18rem;
+  font-size: 0.78rem;
 }
 
 /* Practice  */
@@ -542,14 +540,14 @@ nav {
     display: none;
   }
 
-  .selected-work aside {
+  .digital-cta {
     border-top: 1px solid var(--line);
     border-left: 0;
     padding: 1.5rem 1.5rem 0;
     text-align: center;
   }
 
-  .selected-work aside p {
+  .digital-cta p {
     margin-inline: auto;
   }
 
