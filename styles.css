@@ -1,3 +1,6 @@
+/* Global Styles */
+/* Define the base styles for the entire website */
+
 :root {
   --bone: #f0e7cf;
   --charcoal: #20201d;
@@ -12,8 +15,9 @@
   --muted: #6f6a5c;
   --line: #938d79;
   --accent: var(--cobalt);
-  --display-font: Georgia, "Times New Roman", serif;
-  --body-font: Arial, Helvetica, sans-serif;
+  --display-font: "Fraunces", "Playfair Display", serif;
+  --body-font: "Inter", Arial, Helvetica, sans-serif;
+  --mono-font: "IBM Plex Mono", monospace;
   --max-width: 1180px;
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
 }
@@ -52,62 +56,6 @@ footer {
   width: min(100%, var(--max-width));
   margin-inline: auto;
   padding-inline: var(--gutter);
-}
-
-header {
-  position: relative;
-  min-height: 24rem;
-  background:
-    radial-gradient(
-      circle at 18% 22%,
-      rgba(180, 201, 52, 0.62),
-      transparent 14rem
-    ),
-    radial-gradient(
-      circle at 72% 12%,
-      rgba(184, 95, 66, 0.68),
-      transparent 15rem
-    ),
-    radial-gradient(
-      circle at 55% 84%,
-      rgba(113, 63, 131, 0.86),
-      transparent 18rem
-    ),
-    repeating-linear-gradient(
-      125deg,
-      rgba(240, 231, 207, 0.08) 0 2px,
-      transparent 2px 11px
-    ),
-    linear-gradient(115deg, var(--charcoal), var(--cobalt) 48%, var(--moss));
-  color: var(--bone);
-  padding-top: clamp(4rem, 10vw, 7rem);
-  padding-bottom: 3rem;
-  overflow: hidden;
-}
-
-header::before {
-  position: absolute;
-  top: 10%;
-  right: 24%;
-  width: clamp(3rem, 7vw, 6rem);
-  height: clamp(3rem, 7vw, 6rem);
-  border: 2px solid var(--lime);
-  content: "";
-  transform: rotate(45deg);
-  opacity: 0.9;
-}
-
-header::after {
-  position: absolute;
-  right: 8%;
-  bottom: 2rem;
-  width: clamp(8rem, 18vw, 15rem);
-  height: clamp(8rem, 18vw, 15rem);
-  border: 1px solid var(--bone);
-  border-radius: 50%;
-  content: "";
-  transform: rotate(-25deg) scaleX(1.6);
-  opacity: 0.8;
 }
 
 h1,
