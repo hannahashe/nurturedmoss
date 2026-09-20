@@ -242,20 +242,19 @@ main > section {
   margin-bottom: -0.5rem;
 }
 
-.selected-work > div {
+.selected-work > .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
-/* Article figures and transmissions figures share the same styles */
+/* Article figures  */
 
 article figure {
   margin-bottom: 0.8rem;
 }
 
-article figure div,
-.transmissions figure div {
+article figure div {
   display: grid;
   place-items: center;
   border: 1px solid var(--ink);
@@ -279,22 +278,12 @@ article p {
   background: var(--lime);
   color: var(--charcoal);
   padding: 2rem 0 2rem 2rem;
-}
-
-.digital-cta h3 {
-  font-family: var(--display-font);
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-  font-style: italic;
+  transform: translateY(-3.5rem) rotate(2deg);
 }
 
 .digital-cta a {
   background: var(--charcoal);
   color: var(--bone);
-}
-
-.digital-cta p {
-  max-width: 18rem;
-  font-size: 0.78rem;
 }
 
 /* Practice  */
@@ -330,49 +319,60 @@ article p {
   max-width: 10rem;
 }
 
-/* Transmissions */
+/* Featured Project */
 
-.transmissions {
-  grid-column: 4 / 10;
+.featured-project {
+  grid-column: 4 / 13;
   border-left: 3px solid var(--cobalt);
   padding: 0 3rem;
   text-align: center;
 }
 
-.transmissions .featured-label {
+.featured-project .featured-label {
   margin-bottom: 0.8rem;
   text-transform: uppercase;
 }
 
-.transmissions h2 {
+.featured-project h2 {
   margin-bottom: 1.2rem;
+  text-align: left;
 }
 
-.transmissions .project-tagline {
+.featured-project .project-tagline {
   margin-inline: auto;
   font-size: 0.7rem;
 }
 
-.transmissions figure {
-  margin: 2rem 0 0.8rem;
+.featured-project figure {
+  margin-bottom: 1.5rem;
+  display: grid;
+  place-items: center;
 }
 
-.transmissions dl {
+.featured-project dl {
   margin-bottom: 2rem;
   text-align: left;
   font-size: 0.62rem;
 }
 
-.transmissions dl div + div {
+.featured-project dl div + div {
   margin-top: 0.8rem;
 }
 
-.transmissions dt {
+.featured-project dt {
   text-transform: uppercase;
 }
 
-.transmissions dd {
+.featured-project dd {
   margin: 0;
+}
+
+.featured-project figure div {
+  border: 1px solid var(--ink);
+  width: 600px;
+  height: 200px;
+  background: var(--paper);
+  color: var(--ink);
 }
 
 /* Orbit, Constellations, and Contact */
@@ -523,7 +523,7 @@ nav {
   }
 
   .selected-work,
-  .selected-work > div {
+  .selected-work > .project-grid {
     display: block;
   }
 
